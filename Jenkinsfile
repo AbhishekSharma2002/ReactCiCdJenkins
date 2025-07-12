@@ -10,6 +10,8 @@ pipeline {
             steps {
                 sh '''
                     ls -l
+                    rm -rf node_modules package-lock.json
+                    npm cache clean --force
                     node --version
                     npm --version
                     npm install
